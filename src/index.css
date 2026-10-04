@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --dos-blue: #0000aa;
+    --dos-cyan: #00aaaa;
+    --dos-white: #ffffff;
+    --dos-gray: #aaaaaa;
+    --dos-yellow: #ffff55;
+    --dos-darkgray: #555555;
+  }
+
+  body {
+    font-family: 'JetBrains Mono', 'VT323', monospace;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+}
+
+/* CRT Screen Effect */
+.crt-effect {
+  position: relative;
+}
+
+.crt-effect::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+  background-size: 100% 4px;
+  z-index: 40;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.crt-effect::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: radial-gradient(circle at center, transparent 60%, rgba(0, 0, 0, 0.4) 100%);
+  pointer-events: none;
+  z-index: 41;
+}
+
+/* Classic DOS Box Double Borders */
+.dos-box {
+  border: 2px solid #aaaaaa;
+  box-shadow: inset 1px 1px 0px #ffffff, inset -1px -1px 0px #555555;
+}
+
+.dos-button {
+  background-color: #aaaaaa;
+  color: #000000;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #555555;
+  border-bottom: 2px solid #555555;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: bold;
+}
+
+.dos-button:active {
+  border-top: 2px solid #555555;
+  border-left: 2px solid #555555;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  transform: translate(1px, 1px);
+}
+
+.dos-inset {
+  border-top: 2px solid #555555;
+  border-left: 2px solid #555555;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+}
+
+/* Custom retro scrollbar */
+::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+  background-color: #0000aa;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #aaaaaa;
+  border: 2px solid #555555;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ffffff;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000088;
+  border: 1px solid #000055;
+}

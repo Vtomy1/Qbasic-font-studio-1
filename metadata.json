@@ -1,0 +1,6 @@
+{
+  "name": "QBasic Font Studio",
+  "description": "Design custom pixel character sets and bitmap fonts for QBasic games and DOS applications. Export ready-to-run .BAS code, binary .FNT files, and spritesheets.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
